@@ -1,0 +1,16 @@
+2.a)
+data("USArrests")
+dim(USArrests)
+summary(USArrests)
+
+2.b)
+states <- rownames(USArrests)
+median_assault <- median(USArrests$Assault)
+subset(states, USArrests$Assault > median_assault)
+
+2.c)
+states <- rownames(USArrests)
+q25 <- quantile(USArrests$Murder,
+
+
+
