@@ -1,0 +1,33 @@
+5.a)
+# Create a random sample of 20 letters from LETTERS
+set.seed(123)
+letters_sample <- sample(LETTERS, 20, replace = TRUE)
+
+# Convert the sample into a factor
+letters_factor <- factor(letters_sample)
+
+# Extract the first five levels of the factor
+levels(letters_factor)[1:5]
+
+5.b)
+find_range <- function(vec) {
+  range <- max(vec) - min(vec)
+  return(range)
+}
+# Test the function with the given input
+C <- c(9, 8, 7, 6, 5, 4, 3, 2, 1)
+find_range(C)
+
+5.c)
+count_vowels <- function(str) {
+  # Convert the string to lowercase
+  str <- tolower(str)
+  # Split the string into individual characters
+  chars <- strsplit(str, "")[[1]]
+  # Count the number of vowels
+  num_vowels <- sum(chars %in% c("a", "e", "i", "o", "u"))
+  return(num_vowels)
+}
+# Test the function with the given input
+c <- "matrix"
+count_vowels(c)
